@@ -17,9 +17,10 @@ public class RatingServiceImpl implements RatingService {
 
     @Override
     public Rating createRating(Rating rating) {
-        return ratingRepository.save(rating);
+        ratingRepository.save(rating);
+        return rating;
     }
-
+    @Override
     public List<Rating> getRatings() {
         return ratingRepository.findAll();
     }

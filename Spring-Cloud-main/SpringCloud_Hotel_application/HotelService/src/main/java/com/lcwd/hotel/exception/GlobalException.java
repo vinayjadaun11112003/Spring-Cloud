@@ -14,7 +14,11 @@ public class GlobalException {
 
         String message= ex.getMessage();
 
-        Apiresponse response= Apiresponse.builder().message(message).success(true).status(HttpStatus.NOT_FOUND).build();
+        Apiresponse response = new Apiresponse();
+        response.setMessage(message);
+        response.setSuccess(true);
+        response.setStatus(HttpStatus.NOT_FOUND);
+
 
         return new ResponseEntity<>(response,HttpStatus.NOT_FOUND);
     }

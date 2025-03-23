@@ -30,7 +30,7 @@ public class RatingController {
     public ResponseEntity<List<Rating>> getRatings(){
         List<Rating> rating= ratingService.getRatings();
 
-        return ResponseEntity.status(HttpStatus.OK).body(rating);
+        return new ResponseEntity<>(rating,HttpStatus.OK);
     }
 
     @GetMapping("/user/{userId}")

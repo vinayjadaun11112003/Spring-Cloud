@@ -1,4 +1,4 @@
-package com.lcwd.hotel.model;
+package com.user.service.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
